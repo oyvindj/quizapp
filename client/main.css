@@ -77,6 +77,13 @@ ul {
   border: none;
   position: relative;
 }
+
+.edit {
+  float: right;
+  font-weight: bold;
+  font-size: 1em;
+  position: relative;
+}
  
 li {
   position: relative;

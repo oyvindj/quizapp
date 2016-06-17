@@ -5,6 +5,7 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import { Quizes } from '../api/quizes.js';
  
 import './quiz.js';
+import './quizlist.js';
 import './body.html';
 
 Template.body.onCreated(function bodyOnCreated() {

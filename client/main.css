@@ -23,6 +23,14 @@ body {
   min-height: 100%;
   background: white;
 }
+
+.menu {
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 30px;
+  background: black;
+  color: white;
+}
  
 header {
   background: #d2edf4;

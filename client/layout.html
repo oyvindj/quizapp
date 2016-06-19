@@ -1,0 +1,12 @@
+<template name="layout">
+    <h2 align="center">QuizApp</h2>
+    <div class="menu">
+      {{> menu}}
+    </div>
+    <div class="login">{{> loginButtons}}</div>
+	<div class="container">
+		{{> yield}}
+	</div>
+    <hr />
+    <p>Copyright &copy; Todos, 2014-2015.</p>
+</template>

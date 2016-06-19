@@ -1,0 +1,17 @@
+  <template name="questionlist">
+    <h3>Question List</h3>
+    <div>
+      
+      {{#if currentUser}}
+        <form class="new-question">
+          <input type="text" name="text" placeholder="Type to add new question" />
+      </form>
+      {{/if}}
+    </div>
+ 
+    <ul>
+      {{#each questions}}
+        {{> question}}
+      {{/each}}
+    </ul>
+  </template>

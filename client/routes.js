@@ -1,11 +1,15 @@
+import { Mongo } from 'meteor/mongo';
+
 import '../imports/ui/body.js';
 import '../imports/ui/quizlist.js';
 import '../imports/ui/editquiz.js';
 import '../imports/ui/questionlist.js';
 import '../imports/ui/editquestion.js';
-
+import { Quizes } from '../imports/api/quizes.js';
+import { Questions } from '../imports/api/questions.js';
+ 
 Router.configure({
-    layoutTemplate: 'layout'
+    layoutTemplate: 'layout',
 });
 
 Router.route('/', {
@@ -20,10 +24,22 @@ Router.route('aboutus', {
 Router.route('quiz/:_id', {
     name: 'editquiz',
     template: 'editquiz',
+    subscriptions: function() {
+    	this.subscribe('quizes');
+	},
     data: function(){
-    	console.log('this is a quiz page...');
-    	console.log('id: ' + this.params._id);
-    	//Quizes.findOne({ _id: this.params._id });
+    	return Quizes.findOne({ _id: this.params._id });
+    }
+});
+
+Router.route('question/:_id', {
+    name: 'editquestion',
+    template: 'editquestion',
+    subscriptions: function() {
+    	this.subscribe('questions');
+	},
+    data: function(){
+    	return Questions.findOne({ _id: this.params._id });
     }
 });
 
@@ -31,18 +47,8 @@ Router.route('questionlist', {
     name: 'questionlist'
 });
 
-Router.route('editquestion', {
-    name: 'editquestion'
-});
 
-outer.route('editquiz/:_id', {
-    name: 'editquiz',
-    data: function(){
-    	console.log('this is a editquiz page...');
-    	console.log('id: ' + this._id);
-    	//Quizes.findOne({ _id: this.params._id });
-    }
-});
+
 
 
 

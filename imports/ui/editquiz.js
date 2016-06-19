@@ -15,3 +15,7 @@ Template.editquiz.events({
     	Router.go('quizlist');
 	},
 });
+
+Template.editquiz.rendered = function() {
+    console.log(this.data); 
+};

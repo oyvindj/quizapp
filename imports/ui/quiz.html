@@ -1,7 +1,7 @@
 <template name="quiz">
   <li class="{{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
     <button class="delete">&times;</button>
-    <button type="submit" class="edit">Edit</button>
+    <a href="{{pathFor route='editquiz'}}" class="edit">Edit Questions</a>
  
     <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
 

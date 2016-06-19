@@ -1,10 +1,12 @@
 /* CSS declarations go here */
 body {
   font-family: sans-serif;
-  background-color: #315481;
+  background-color: yellow;
+  /*
   background-image: linear-gradient(to bottom, #315481, #918e82 100%);
   background-attachment: fixed;
- 
+  */
+
   position: absolute;
   top: 0;
   bottom: 0;
@@ -27,13 +29,20 @@ body {
 .menu {
   max-width: 600px;
   margin: 0 auto;
-  min-height: 30px;
+  /* min-height: 30px; */
   background: black;
   color: white;
+  font-weight: bold;
+}
+
+.login {
+  margin: 0 auto;
+  background: white;
+  padding: 5px;
 }
  
 header {
-  background: #d2edf4;
+  background: green;
   background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
   padding: 20px 15px 15px 15px;
   position: relative;
@@ -41,6 +50,8 @@ header {
  
 #login-buttons {
   display: block;
+  background: white;
+  /* float: right; */
 }
  
 h1 {
@@ -154,4 +165,28 @@ header .hide-completed {
 
 :-ms-input-placeholder {  
    color: gray;  
+}
+
+/* unvisited link */
+a:link {
+    color: gray;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: gray;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: orange;
+    text-decoration: none;
 }

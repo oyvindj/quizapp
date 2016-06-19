@@ -1,20 +1,16 @@
   <template name="quizlist">
-    <header>
-      <h1>Make A Quiz ({{incompleteCount}})</h1>
-
+    <div>
       <label class="hide-completed">
         <input type="checkbox" />
         Hide Completed Quizes
       </label>
-
-      {{> loginButtons}}
 
       {{#if currentUser}}
         <form class="new-task">
           <input type="text" name="text" placeholder="Type to add new quiz" />
       </form>
       {{/if}}
-    </header>
+    </div>
  
     <ul>
       {{#each quizes}}

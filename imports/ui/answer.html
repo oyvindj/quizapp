@@ -1,0 +1,10 @@
+<template name="answer">
+  <li class="{{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
+    <button class="delete">&times;</button>
+    <a href="{{pathFor route='editanswer'}}" class="edit">Edit Answer</a>
+ 
+    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+
+    <span class="text">{{text}}</span>
+  </li>
+</template>

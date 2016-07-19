@@ -1,0 +1,17 @@
+<template name="answerlist">
+    <h3>Answer List</h3>
+    <div>
+      
+      {{#if currentUser}}
+        <form class="new-answer">
+          <input type="text" name="text" placeholder="Type to add new answer" />
+      </form>
+      {{/if}}
+    </div>
+ 
+    <ul>
+      {{#each answers re}}
+        {{> answer}}
+      {{/each}}
+    </ul>
+  </template>

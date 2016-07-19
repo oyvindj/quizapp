@@ -1,6 +1,6 @@
 import { Template } from 'meteor/templating';
  
-import { questions } from '../api/questions.js';
+import { Questions } from '../api/questions.js';
  
 import './question.html';
 
@@ -16,6 +16,7 @@ Template.question.events({
   },
 
   'click .delete'() {
+  	console.log('quiz id: ' + this._id)
     Meteor.call('questions.remove', this._id);
   },
 
